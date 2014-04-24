@@ -19,12 +19,12 @@ Para comprobar que funciona tenéis que arrancarlo y usar alguna herramienta o h
 
 Los datos que tratamos serán en JSON Y las URLs que hay son:
 
--/api/grupos
+* /api/grupos
 GET: Obtiene todos los grupos que hay creados
 POST: Crea un grupo para ello pasarle un JSON en el cuerpo del mensaje del tipo {"nombre":"Queen", "votosPositivos":50000, "votosNegativos":1}, 404 en caso de pasarle mal el JSON
 DELETE: Borra todos los grupos almacenados.
 
--/api/grupos/{nombreGrupo}
+* /api/grupos/{nombreGrupo}
 GET: Obtiene el grupo cuyo nombre coincida con {nombreGrupo}, 404 en caso de no encontrarlo
 PUT: Actualiza el grupo cuyo nombre coincida con {nombreGrupo}, 404 en caso de no encontrarlo o pasarle mal el JSON
 DELETE: Borra el grupo cuyo nombre coincida con {nombreGrupo}, 404 en caso de no encontrarlo
