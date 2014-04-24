@@ -21,7 +21,7 @@ Los datos que tratamos serán en JSON Y las URLs que hay son:
 
 */api/grupos*
 * GET: Obtiene todos los grupos que hay creados
-* POST: Crea un grupo para ello pasarle un JSON en el cuerpo del mensaje del tipo {"nombre":"Queen", "votosPositivos":50000, "votosNegativos":1}, 404 en caso de pasarle mal el JSON
+* POST: Crea un grupo para ello pasarle un JSON en el cuerpo del mensaje del tipo `{"nombre":"Queen", "votosPositivos":50000, "votosNegativos":1}`, 404 en caso de pasarle mal el JSON
 * DELETE: Borra todos los grupos almacenados.
 
 */api/grupos/{nombreGrupo}*
