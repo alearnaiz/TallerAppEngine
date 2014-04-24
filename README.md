@@ -9,7 +9,9 @@ Instalación
 Este proyecto usa AppEngine, por lo que para hacerlo funcionar teneis que tener el plugin de Google instalado además de el de Git para Eclipse
 
 1-Importar el proyecto como un proyecto Git
+
 2-Añadir la URL https://github.com/alearnaiz/TallerAppEngine.git o usar el proyecto clonado si ya os lo habías bajado antes
+
 3-Cuando termine de bajarse seleccionar que el proyecto ya existe. Si todo esta bien, ya tendréis el proyecto montado
 
 Uso
