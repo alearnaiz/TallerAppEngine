@@ -8,16 +8,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import almacen.MiAlmacen;
-
 import com.google.gson.Gson;
 
 import modelo.Grupo;
+import modeloBD.GrupoEntityDS;
+import modeloBD.IGrupoEntityDS;
 
 
 public class NombreGrupoServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 2L;
+	
+	private IGrupoEntityDS db = new GrupoEntityDS();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -34,19 +36,20 @@ public class NombreGrupoServlet extends HttpServlet {
 		// Comprobamos si existe el grupo elegido
 		Grupo grupo = null;
 		if (!nombre.isEmpty()){
-			grupo = MiAlmacen.buscarGrupo(nombre);
+			grupo = db.buscarGrupo(nombre);
 			if (grupo == null){
-				resp.setStatus(404);
+				resp.sendError(404);
+			}
+			else{
+				// Devolvemos en formato json el grupo buscado
+				Gson gson = new Gson();
+				String jsonString = gson.toJson(grupo);
+				resp.getWriter().println(jsonString);
 			}
 		}
 		else{
 			resp.setStatus(404);
 		}
-		
-		// Devolvemos en formato json el grupo buscado
-		Gson gson = new Gson();
-		String jsonString = gson.toJson(grupo);
-		resp.getWriter().println(jsonString);
 	}
 
 	@Override
@@ -74,21 +77,22 @@ public class NombreGrupoServlet extends HttpServlet {
 			if (jsonString == null || jsonString.isEmpty()){
 				resp.sendError(404);
 			}
-			
-			try{
-				// Actualizamos los datos si existen
-				Gson gson = new Gson();
-				Grupo grupoActualizado = gson.fromJson(jsonString, Grupo.class);
-				if (MiAlmacen.updateGrupo(nombre, grupoActualizado)){
-					resp.setStatus(204);
+			else{
+				try{
+					// Actualizamos los datos si existen
+					Gson gson = new Gson();
+					Grupo grupoActualizado = gson.fromJson(jsonString, Grupo.class);
+					if (db.updateGrupo(nombre, grupoActualizado)){
+						resp.setStatus(204);
+					}
+					else{
+						resp.setStatus(404);
+					}
 				}
-				else{
-					resp.setStatus(404);
+				catch(Exception e){
+					System.out.println("ERROR");
+					resp.sendError(404);
 				}
-			}
-			catch(Exception e){
-				System.out.println("ERROR");
-				resp.sendError(404);
 			}
 		}
 		else{
@@ -109,7 +113,7 @@ public class NombreGrupoServlet extends HttpServlet {
 		}
 		
 		// Borramos el grupo si se encuentra
-		if (MiAlmacen.removeGrupo(nombre)){
+		if (db.delGrupo(nombre)){
 			resp.setStatus(204);
 		}
 		else{

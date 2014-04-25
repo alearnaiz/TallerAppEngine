@@ -9,13 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import modelo.Grupo;
-import almacen.MiAlmacen;
+import modeloBD.GrupoEntityDS;
+import modeloBD.IGrupoEntityDS;
 
 import com.google.gson.Gson;
 
 public class GrupoServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
+	
+	private IGrupoEntityDS db = new GrupoEntityDS();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -23,7 +26,7 @@ public class GrupoServlet extends HttpServlet {
 		
 		// Devolvemos todos los grupos que existen en la aplicacion
 		Gson gson = new Gson();
-		String jsonString = gson.toJson(MiAlmacen.getGrupos());
+		String jsonString = gson.toJson(db.getGrupos());
 		resp.getWriter().println(jsonString);
 	}
 	
@@ -47,14 +50,13 @@ public class GrupoServlet extends HttpServlet {
 			// Creamos el grupo
 			Gson gson = new Gson();
 			Grupo grupo = gson.fromJson(jsonString, Grupo.class);
-			MiAlmacen.addGrupo(grupo);
+			db.addGrupo(grupo);
+			resp.setStatus(201);
 		}
 		catch(Exception e){
 			System.out.println("ERROR");
 			resp.sendError(404);
 		}
-		
-		resp.setStatus(201);
 	}
 	
 	
@@ -63,7 +65,7 @@ public class GrupoServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		// Borramos todos los grupos que existan
-		MiAlmacen.clearGrupos();
+		db.delGrupos();
 		resp.setStatus(204);
 	}
 
