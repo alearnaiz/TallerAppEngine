@@ -6,7 +6,7 @@ API de grupos de música y su valoración a partir de votos positivos y negativo
 Instalación
 ===========
 
-Este proyecto usa AppEngine, por lo que para hacerlo funcionar teneis que tener el plugin de Google instalado además de el de Git para Eclipse
+Este proyecto usa App Engine con el Datastore que provee Google, por lo que para hacerlo funcionar teneis que tener el plugin de Google instalado además de el de Git para Eclipse
 
 1-Importar el proyecto como un proyecto Git
 
