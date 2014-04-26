@@ -30,3 +30,8 @@ Los datos que tratamos serán en `JSON` Y las URLs que hay son:
 * GET: Obtiene el grupo cuyo nombre coincida con {nombreGrupo}, 404 en caso de no encontrarlo
 * PUT: Actualiza el grupo cuyo nombre coincida con {nombreGrupo}, para ello pasarle un JSON en el cuerpo del mensaje del tipo `{"nombre":"Queen", "votosPositivos":300, "votosNegativos":2}`, 404 en caso de no encontrarlo o pasarle mal el JSON
 * DELETE: Borra el grupo cuyo nombre coincida con {nombreGrupo}, 404 en caso de no encontrarlo
+
+Cliente
+=======
+
+Se ha creado un archivo index.html con el que puedes crear datos y consumirlos. No sé muy bien la razón pero solo funciona en IE
