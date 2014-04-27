@@ -31,8 +31,6 @@ Los datos que tratamos serán en `JSON` Y las URLs que hay son:
 * PUT: Actualiza el grupo cuyo nombre coincida con {nombreGrupo}, para ello pasarle un JSON en el cuerpo del mensaje del tipo `{"nombre":"Queen", "votosPositivos":300, "votosNegativos":2}`, 404 en caso de no encontrarlo o pasarle mal el JSON
 * DELETE: Borra el grupo cuyo nombre coincida con {nombreGrupo}, 404 en caso de no encontrarlo
 
-
-
 A parte de la API REST cuenta con un servicio POST para la carga inicial de datos a través de Twitter, en la que pasándole nombres de grupos te saca de cada uno los votos positivos y votos negativos a raíz de los últimos tweets que contengan la palabra del grupo y palabras que nosotros consideremos positivas ("bueno", "buen", "gusta", "genial", "estupendo", "nice", "genial", "maravilloso", "maravillosa", "buena", "precioso", "preciosa") a las que le daremos un voto positivo como a tweets que contengan palabras que nosotros consideremos negativo ("malo", "mala", "feo", "fea", "horrible", "terrible", "inutil", "feisimo", "feisima", "nefasta", "nefasto", "odio") a las que le daremos un voto negativo.
 
 */api/Carga*
