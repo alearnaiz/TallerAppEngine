@@ -35,7 +35,7 @@ A parte de la API REST cuenta con un servicio POST para la carga inicial de dato
 
 */api/carga*
 
-* POST: Crea un conjunto de grupos, para ello pasarle un array de JSON en el cuerpo del mensaje del tipo `[{"nombre": "sabina"}, {"nombre": "mecano"}].`, 404 en caso de pasarle mal el JSON
+* POST: Crea un conjunto de grupos, para ello pasarle un array de JSON en el cuerpo del mensaje del tipo `[{"nombre": "sabina"}, {"nombre": "mecano"}]`, 404 en caso de pasarle mal el JSON
 
 Cliente
 =======
