@@ -33,7 +33,7 @@ Los datos que tratamos serán en `JSON` Y las URLs que hay son:
 
 A parte de la API REST cuenta con un servicio POST para la carga inicial de datos a través de Twitter, en la que pasándole nombres de grupos te saca de cada uno los votos positivos y votos negativos a raíz de los últimos tweets que contengan la palabra del grupo y palabras que nosotros consideremos positivas ("bueno", "buen", "gusta", "genial", "estupendo", "nice", "genial", "maravilloso", "maravillosa", "buena", "precioso", "preciosa") a las que le daremos un voto positivo como a tweets que contengan palabras que nosotros consideremos negativo ("malo", "mala", "feo", "fea", "horrible", "terrible", "inutil", "feisimo", "feisima", "nefasta", "nefasto", "odio") a las que le daremos un voto negativo.
 
-*/api/Carga*
+*/api/carga*
 
 * POST: Crea un conjunto de grupos, para ello pasarle un array de JSON en el cuerpo del mensaje del tipo `[{"nombre": "sabina"}, {"nombre": "mecano"}].`, 404 en caso de pasarle mal el JSON
 
