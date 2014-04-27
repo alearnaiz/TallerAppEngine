@@ -34,4 +34,4 @@ Los datos que tratamos serán en `JSON` Y las URLs que hay son:
 Cliente
 =======
 
-Se ha creado un archivo `index.html` con el que puedes crear datos para la API y consumirlos. No sé muy bien la razón pero solo funciona en IE, de todos modos con la app que pusimos a continuación va sin problema.
+Se ha creado un archivo `index.html` con el que puedes crear datos para la API y consumirlos. No sé muy bien la razón pero solo funciona en IE, de todos modos con la app que pusimos anteriormente va sin problema.
