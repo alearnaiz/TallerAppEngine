@@ -18,9 +18,9 @@
   </head>
 
   <body>
-    
+    <div class="ConsultaAPI" style="float: left;">
     <p>
-    	<span>Carga inicial de datos</span><br/>
+    	<span><strong>Carga inicial de datos</strong></span><br/>
     	
     	<span>JSON a insertar tipo [{"nombre": "sabina"}, {"nombre": "mecano"}]</span>
     	<input type="text" id="textoCargaInicial"/><br/>
@@ -29,7 +29,7 @@
     </p>
     
     <p>
-    	<span>Consultar Grupo</span><br/>
+    	<span><strong>Consultar Grupo</strong></span><br/>
     	
     	<span>Nombre del grupo</span>
     	<input type="text" id="textoGrupo"/><br/>
@@ -37,7 +37,55 @@
     	<button id="botonGrupo">Ver grupo</button><br/>
     </p>
     
-    <div id="grupo"></div>
+	<p>
     
+	<span><strong>Consultar Grupos</strong></span><br/>
+      	
+    	<button id="botonGrupos">Consultar</button><br/>
+    </p>
+	
+	<p>
+    	<span><strong>Actualizar Grupo</strong></span><br/>
+      	
+		<span>Nombre del grupo</span>
+    	<input type="text" id="textoGrupoAct"/><br/>
+		<span>Nuevos Datos</span><br/>
+		<span>JSON del tipo {"nombre": "sabina", "votosPositivos": 10000, "votosNegativos": 0}</span>
+		<input type="text" id="textoActualizar"/><br/>
+    	<button id="botonGrupoAct">Actualizar</button><br/>
+    </p>
+	
+		
+	<p>
+    	<span><strong>Insertar Grupo</strong></span><br/>
+      	
+		<span>Nombre del grupo</span><br/>
+		<span>JSON del tipo {"nombre": "queen", "votosPositivos": 50000, "votosNegativos": 0}</span>
+    	<input type="text" id="textoGrupoInser"/><br/>
+    	<button id="botonGrupoInser">Crear</button><br/>
+    </p>
+	
+	<p>
+    	<span><strong>Borrar Grupos</strong></span><br/>
+      	
+    	<button id="botonGrupoBorrarT">Borrar</button><br/>
+    </p>
+	
+	<p>
+    	<span><strong>Borrar Grupo</strong></span><br/>
+      	
+		<span>Nombre del grupo</span>
+    	<input type="text" id="textoGrupoBor"/><br/>
+    	<button id="botonGrupoBorrar">Borrar</button><br/>
+    </p>
+	</div>
+    
+	<div id="resultados" style="float: right;padding-right: 400px;">
+	<h3>Resultados</h3>
+	
+		<div id="grupo">
+		
+		</div>
+    </div>
   </body>
 </html>
