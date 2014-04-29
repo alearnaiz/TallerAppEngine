@@ -11,7 +11,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   	</servlet>
   	<servlet-mapping>
  		<servlet-name>NombreGrupoServlet</servlet-name>
-    	<url-pattern>api/grupos/*</url-pattern>
+    	<url-pattern>/api/grupos/*</url-pattern>
   	</servlet-mapping>
 	 
   	
@@ -21,17 +21,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   	</servlet>
   	<servlet-mapping>
  		<servlet-name>GrupoServlet</servlet-name>
-    	<url-pattern>api/grupos</url-pattern>
+    	<url-pattern>/api/grupos</url-pattern>
   	</servlet-mapping>
   	
   	
   	<servlet>
-  	<servlet-name>CargaInicial</servlet-name>
+  		<servlet-name>CargaInicial</servlet-name>
     	<servlet-class>servlet.CargaInicial</servlet-class>
   	</servlet>
   	<servlet-mapping>
  		<servlet-name>CargaInicial</servlet-name>
-    	<url-pattern>api/carga</url-pattern>
+    	<url-pattern>/api/carga</url-pattern>
   	</servlet-mapping>  	
   	
   	
