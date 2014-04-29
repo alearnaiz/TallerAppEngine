@@ -41,3 +41,8 @@ Cliente
 =======
 
 Se ha creado un archivo `index.html` que hace uso de jQuery, con el que puedes crear datos para la API y consumirlos. No sé muy bien la razón pero solo funciona en IE, de todos modos con la app que pusimos anteriormente va sin problema.
+
+App Engine
+==========
+
+La aplicación se encuentra desplegada en la nube y disponible para todos los usuarios en la URL: http://1-dot-tallerawsg6.appspot.com/
