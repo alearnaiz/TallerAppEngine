@@ -6,7 +6,7 @@ $(document).ready(function(){
 			alert("Datos vacios");
 		}
 		else{
-			$.post("api/carga", text, function(){
+			$.post("/api/carga", text, function(){
 				$("#textoCargaInicial").val('');
 			}).done(function(){
 				$("#grupo").append($("<p>Insertado Grupos Correctamente</p>"));
