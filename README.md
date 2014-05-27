@@ -45,4 +45,4 @@ Se ha creado un archivo `index.html` que hace uso de jQuery, con el que puedes c
 App Engine
 ==========
 
-La aplicación se encuentra desplegada en la nube y disponible para todos los usuarios en la URL: `http://tallerawsg6.appspot.com/`
+La aplicación se encuentra desplegada en la nube y disponible para todos los usuarios en la URL: http://tallerawsg6.appspot.com/
